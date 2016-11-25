@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Setings extends Migration
+class Logindevice extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class Setings extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('logindevice', function(Blueprint $table) {
+            $table->increments('user_id');
+            $table->string('device_id');
+         
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class Setings extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('logindevice');
     }
 }

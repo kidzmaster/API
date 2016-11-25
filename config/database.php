@@ -61,7 +61,7 @@ return [
         'host' => 'localhost'
     ],
     'driver'    => 'mysql',
-    'database'  => 'chitieu',
+    'database'  => 'appchitieu',
     'username'  => 'root',
     'password'  => '',
     'charset'   => 'utf8',

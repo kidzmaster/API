@@ -13,7 +13,16 @@ class Helps extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('helps', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('ruler_id');
+            $table->integer('min');
+            $table->integer('max');
+            $table->text('content');
+            $table->string('status');       
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class Helps extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('helps');   
     }
 }

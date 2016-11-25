@@ -16,3 +16,18 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::resource('admin/posts', 'Admin\\PostsController');
+
+Route::resource('Customers','CustomerController');
+
+Route::resource('Rulers','RulerController');
+
+Route::resource('Helps','HelpController');
+Route::resource('Users','UserController');
+
+Route::get('/edit','CustomerController@edit');

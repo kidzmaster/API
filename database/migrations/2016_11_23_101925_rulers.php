@@ -13,7 +13,14 @@ class Rulers extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('rulers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('ruler_id');
+            $table->text('content');
+            $table->string('status');       
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class Rulers extends Migration
      */
     public function down()
     {
-        //
+       
     }
 }

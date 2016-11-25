@@ -13,7 +13,16 @@ class Customers extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('customers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('username');
+            $table->string('password');
+            $table->integer('studient_code');
+            $table->string('full_name');
+            $table->text('description');
+            $table->string('status');       
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class Customers extends Migration
      */
     public function down()
     {
-        //
+         Schema::drop('customers');
     }
 }
